@@ -1,4 +1,4 @@
-import { Injectable, HttpException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { Courses, CoursesDocument } from 'src/schemas/courses.schema';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
