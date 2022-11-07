@@ -5,13 +5,10 @@ import { CoursesModule } from './courses/courses.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://pvthang4:zh2n3zuK9eanGYSO@cluster0.ytehd2z.mongodb.net/app-nestjs?retryWrites=true&w=majority',
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      },
-    ),
+    MongooseModule.forRoot(process.env.MONGODB_DB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }),
     CatsModule,
     CoursesModule,
   ],
